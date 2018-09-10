@@ -1,0 +1,18 @@
+.container {
+  display: block;
+  text-align: center;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.box{
+  font-style: italic;
+}
+
+a {
+  color:#000000;
+}
