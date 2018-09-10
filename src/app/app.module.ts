@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RepoInfoComponent } from './components/repo-info/repo-info.component';
+import { RepoInfoService } from './services/repo-info.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { RepoInfoComponent } from './components/repo-info/repo-info.component';
     RepoInfoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    RepoInfoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
