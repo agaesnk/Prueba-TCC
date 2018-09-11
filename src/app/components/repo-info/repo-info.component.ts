@@ -10,8 +10,8 @@ import { RepoInfoService } from '../../services/repo-info.service';
 export class RepoInfoComponent implements OnInit {
 
   data: any;
-  servicesAmount: 0;
-  componentsAmount: 0;
+  servicesAmount = 0;
+  componentsAmount = 0;
 
   constructor(
     private repoInfoService: RepoInfoService
@@ -20,7 +20,7 @@ export class RepoInfoComponent implements OnInit {
   ngOnInit() {
     //Requiero toda la información del repositorio
     this.repoInfoService.getUser()
-    .then(data => {
+    .then((data) => {
       this.data = data;
     })
 

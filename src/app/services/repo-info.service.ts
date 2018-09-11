@@ -15,16 +15,16 @@ export class RepoInfoService {
   
   getUser(): Promise<any> {
     const options = {
-      withCredentials: true
+      withCredentials: false
     };
     return this.httpClient.get(`${this.githubApiUrl}`, options)
-      .toPromise()
-      // .then((data) =>{
-      //   return data.json();
-      // })
-      // .catch(error =>{
-      //   console.log(error);
-      // })
+    .toPromise()
+    .then((data:any) => {
+      return data;
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 
 }
