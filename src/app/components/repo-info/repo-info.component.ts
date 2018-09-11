@@ -19,7 +19,7 @@ export class RepoInfoComponent implements OnInit {
 
   ngOnInit() {
     //Requiero toda la información del repositorio
-    this.repoInfoService.getUser()
+    this.repoInfoService.getInfo()
     .then((data) => {
       this.data = data;
     })

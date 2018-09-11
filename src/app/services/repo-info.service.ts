@@ -13,7 +13,7 @@ export class RepoInfoService {
     private httpClient: HttpClient) { 
     }
   
-  getUser(): Promise<any> {
+  getInfo(): Promise<any> {
     const options = {
       withCredentials: false
     };
